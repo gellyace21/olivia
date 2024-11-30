@@ -72,6 +72,7 @@ body {
     bottom: 0;
     left: 0;
     padding: 2rem 0;
+    gap: .5rem;
   }
 
   main {
@@ -111,6 +112,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: .5s;
+    text-decoration: none;
   }
 
   .getStartedButton:hover {
@@ -122,6 +124,12 @@ body {
     text-decoration: none;
     color: white;
     font-size: 3rem;
+    transition: .5s;
+  }
+
+  .getStartedButton:hover .getStarted {
+    text-shadow: 0px 0px 15px white;
+    transition: .5s;
   }
 
   .bandaid {
