@@ -96,24 +96,37 @@ body {
   }
 
   .content {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
-    gap: 3rem;
+    gap: 8rem;
   }
 
   /* HTML: <div class="star"></div> */
 
-  
+  .getStartedButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+  }
+
+  .getStartedButton:hover {
+    transition: .5s;
+    rotate: -15deg;
+  }
 
   .getStarted {
     text-decoration: none;
     color: white;
+    font-size: 3rem;
   }
 
   .bandaid {
     position: absolute;
+    z-index: -1;
   }
 
   /* .star {
