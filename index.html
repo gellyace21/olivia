@@ -9,21 +9,7 @@
   </head>
   <body>
     <main>
-      <nav>
-        <div class="nav-container">
-          <ul>
-            <li>
-              <a href="#"
-                ><img
-                  src="res/images/brandlogo.gif"
-                  alt="Olivia Rodrigo"
-                  width="40"
-              /></a>
-            </li>
-            <li>Creators</li>
-          </ul>
-        </div>
-      </nav>
+      <div w3-include-html="nav.html"></div>
       <div id="myVideo-container">
           <video autoplay muted loop id="myVideo">
             <source src="res/videos/bgvid.mov" type="video/mp4" />
@@ -49,5 +35,9 @@
         <p>Gill Irish B. Lusabio, Hamrainie L. Montañer, John Patrick B. Salen</p>
       </footer>
     </main>
+    <script src="nav.js"></script>
+    <script>
+      includeHTML();
+    </script>
   </body>
 </html>

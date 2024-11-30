@@ -42,6 +42,7 @@ body {
     top: 0;
     position: sticky;
     background-color: #211637;
+    z-index: 99;
   }
 
   .nav-container ul {
@@ -165,3 +166,78 @@ body {
     background-color: #3c4170; /* Change background color on hover 
     transform: scale(1.1); /* Slightly enlarge the star on hover 
   } */
+
+
+  /* Login Styling */
+
+  .loginMain { 
+    transition: .5s ease-in-out;
+    background-image: url('res/images/loginbg.png');
+    background-size: auto;
+    height: 100svh;
+    z-index: 29;
+  }
+
+  #overlayImage {
+    position: absolute; /* Position the image above the video and gradient */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    z-index: -1; /* Ensure the image is above the gradient and video */
+    width: 100%; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .loginContainer {
+    height: 90svh;
+    width: 100%;
+    align-content: center;
+    z-index: 3;
+  }
+
+  .loginBox {
+    /* width: 500px;
+    height: 700px; */
+    background-color: #524a96;
+    float: right;
+    margin-right: 16rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 7rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    zoom: 120%;
+  }
+
+  .loginBox input {
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    width: 120%;
+  }
+
+  .loginBox label {
+    margin-right: auto;
+    margin-bottom: -1.5rem;
+  }
+
+  .loginBox button {
+    width: 135%;
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    color:white;
+    background-color: #847dbf;
+    transition: .5s;
+  }
+
+  .loginBox button:hover {
+    transition: .5s;
+    background-color: #96a1d6;
+  }
+  
+
+  /* End of Login Styling */
