@@ -1,0 +1,147 @@
+:root {
+    --guts: #3d2155;
+    --sour: #524a96;
+    --light: rgb(197, 166, 255);
+
+}
+
+body {
+    overflow-y: auto;
+}
+
+.songContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90svh;
+    width: 100svw;
+}
+
+.songContainer img {
+    width: 10rem;
+    height: auto;
+}
+
+.songItem .play, .songItem .pause{
+    width: 3rem;
+    margin-right: 3rem;
+}
+
+.songContent {
+    display: flex;
+    width: 100svw;
+    height: 100svh;
+}
+
+.songInfo {
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+.gutsAlbum, .sourAlbum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50svw;
+    height: 150%;
+    gap: 3rem;
+}
+
+
+.gutsAlbum {
+    background-color: var(--guts);
+}
+
+.sourAlbum {
+    background-color: var(--sour);
+    
+}
+
+.songItem {
+    width: 800px;
+    min-height: 100px;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.gutsAlbum .songItem {
+    height: auto;
+    background-color: var(--sour);
+}
+
+.sourAlbum .songItem {
+    background-color: var(--guts);
+}
+
+.progress-bar {
+    margin: 20px 0;
+    background: #404040;
+    height: 10px;
+    border-radius: 5px;
+    width: 425px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-bar span {
+    display: block;
+    background: var(--light);
+    height: 100%;
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+.play, .pause {
+    cursor: pointer;
+    transition: filter .5s;
+}
+
+.play:hover, .pause:hover {
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+.pause {
+    display: none;
+}
+
+.volume-container {
+    margin-top: 10px;
+}
+.volume-slider {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;  /* For Safari */
+    appearance: none;
+    height: 10px;  /* Set slider height */
+    border-radius: 5px; /* Round edges */
+    background: #ddd; /* Light background color */
+    cursor: pointer;
+
+}
+.volume-slider::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 5px;
+    background: white;  /* Set slider track color */
+}
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--light); /* Set thumb color */
+    border: 2px solid #fff; /* Add a border to the thumb */
+    transform: translateY(-20%);
+}
