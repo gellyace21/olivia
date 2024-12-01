@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="res/images/icon.png" />
+    <style>
+      #myVideo-container:before {
+        background: linear-gradient(#1c1a29d7, #1c1a29d7);
+      }
+    </style>
+  </head>
+  <body>
+    <div w3-include-html="nav.html"></div>
+    <div id="myVideo-container">
+      <video autoplay muted loop id="myVideo">
+        <source src="res/videos/bgvid.mov" type="video/mp4" />
+      </video>
+      <img
+        src="res/images/bgOlivia.png"
+        alt="Overlay Image"
+        id="overlayImage"
+        style="top: 42%"
+      />
+    </div>
+    <div class="oliviaContainer">
+      <div class="oliviaContent">
+        <p>
+                  Olivia Isabel Rodrigo is a Filipino-American singer-songwriter
+          and actress. She first became known for starring on the Disney Channel
+          series Bizaardvark and the Disney+ series High School Musical: The
+          Musical: The Series.
+        </p>
+        <p style="color: #d8d4ff">
+          Born: February 20, 2003 (Murrieta, California, United States)<br>Height:
+          1.65 m<br>Nationality: Filipino - American
+        </p>
+        <div class="socials-container">
+            <div class="socials">
+                <ul class="socials1" type="none">
+                    <li href="" class="socialLinks"><a href="https://www.instagram.com/gllyace_"><img src="res/images/oliviaPage/instagram.png"> @gllyace_</a></li>
+                    <li href="" class="socialLinks"><a href=""><img src="res/images/oliviaPage/facebook.png" alt=""> gellyace</a></li>
+                    <li class="socialLinks"><a href=""><img src="res/images/oliviaPage/x.png" alt=""> @irshjwo</a>
+                </ul>
+                <ul class="socials2" type="none">
+                    <li href="" class="socialLinks"><a href=""><img src="res/images/oliviaPage/youtube.png" alt=""> Gill Irish Lusabio</a></li>
+                    <li href="" class="socialLinks"><a href=""><img src="res/images/oliviaPage/tik-tok.png" alt=""> @irishgelly</a></li>
+                    <li href="" class="socialLinks"><a href=""><img src="res/images/oliviaPage/spotify.png" alt=""> gllyace</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="nav.js"></script>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
