@@ -19,13 +19,17 @@ body {
     overflow: hidden;
 }
 
-#overlay {
-    border-image: fill 1
-    linear-gradient(to right,rgba(65, 0, 255, 0.4),rgba(255, 0, 232, 0.3));
-    backdrop-filter: blur(16px);
-  }
+#overlayImage { /* Styling for the png above the video */
+  position: absolute; /* Position the image above the video and gradient */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  z-index: -1; /* Ensure the image is above the gradient and video */
+  width: 100%; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+}
 
-#myVideo {
+#myVideo { /* Stylings for the video background */
     position: fixed;
     right: 0;
     bottom: 0;
@@ -34,7 +38,7 @@ body {
     z-index: -2;
   }
 
-  #myVideo-container:before {
+  #myVideo-container:before { /* The color above the video */
     content: '';
     position: absolute;
     min-height: 100%;
@@ -42,6 +46,8 @@ body {
     background: linear-gradient(#847dbf65,#847dbfa1);
     z-index: -1;
   }
+
+  /* Start of nav */
 
   nav {
     top: 0;
@@ -68,7 +74,11 @@ body {
 
   }
 
-  footer {
+  /* End of nav */
+
+  /* Footer stylings */
+
+  footer { 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,13 +91,10 @@ body {
     gap: .5rem;
     font-size: .8rem;
   }
-/* 
-  main {
-    background-image: url('res/images/bgwebsite.png');
-    background-size: cover;
-    height: 100svh;
-    z-index: 1;
-  } */
+
+  /* End of footer stylings */
+
+  /* index.html content stylings */
 
   .container {
     display: flex;
@@ -112,7 +119,9 @@ body {
     gap: 8rem;
   }
 
-  /* Button */
+  /* End of index.html */
+
+  /* Band-aid Button */
 
   .getStartedButton {
     display: flex;
@@ -145,48 +154,11 @@ body {
     z-index: -1;
   }
 
-  /* .star {
-    transition: .2s;
-    margin-bottom: -4rem;
-    width: 200px;
-    aspect-ratio: 1;
-    background-color: #5c568f;
-    position: relative; /* Needed for positioning the ::before pseudo-element 
-    clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
-    filter: drop-shadow(30px 10px 4px #4444dd);
-  }
-  
-  .star::before {
-    content: "Get Started"; /* Replace with your desired text 
-    position: absolute;
-    color: white;
-    font-size: 1.7em;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  /* End Band-aid button */
 
-  .star:hover {
-    transition: .2s;
-    background-color: #3c4170; /* Change background color on hover 
-    transform: scale(1.1); /* Slightly enlarge the star on hover 
-  } */
+  /* Login/Sign-up Styling */
 
-
-  /* Login Styling */
-
-  #overlayImage {
-    position: absolute; /* Position the image above the video and gradient */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    z-index: -1; /* Ensure the image is above the gradient and video */
-    width: 100%; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .loginContainer {
+  .loginContainer { /* Contains the loginBox; it centers the elements within it (loginBox) with display: flex */
     height: 90svh;
     width: 100%;
     align-content: center;
@@ -195,9 +167,7 @@ body {
     font-weight: bold;
   }
 
-  .loginBox {
-    /* width: 500px;
-    height: 700px; */
+  .loginBox { /* Has the color and the form elements, is a form tag and centers everything within it with display: flex */
     background-color: #524a96;
     float: right;
     margin-right: 16rem;
@@ -212,19 +182,19 @@ body {
     width: 400px;
   }
 
-  .loginBox input {
+  .loginBox input { /* To make the input borders rounded and ensure max width */
     padding: 1rem;
     border-radius: 2rem;
     border: none;
     width: 100%;
   }
 
-  .loginBox label {
+  .loginBox label { /* To position the label sa left, nakagitna kac pag indi nilagyan ni2 (dahil sa align-items center sa loginBox)*/
     margin-right: auto;
     margin-bottom: -1.5rem;
   }
 
-  .loginBox button {
+  .loginBox button { /* Button styling */
     width: 100%;
     padding: 1rem 5rem;
     border: none;
@@ -261,6 +231,7 @@ body {
 
 
   /* Media Stylings */
+  /* This is for adjusting the site's elements depending on the screen size (Desktop, phone, tablet), defined by px (1920 x 1080) */
 
   @media (max-height: 900px) {
 

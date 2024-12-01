@@ -1,0 +1,27 @@
+/* .star {
+    transition: .2s;
+    margin-bottom: -4rem;
+    width: 200px;
+    aspect-ratio: 1;
+    background-color: #5c568f;
+    position: relative; /* Needed for positioning the ::before pseudo-element 
+    clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+    filter: drop-shadow(30px 10px 4px #4444dd);
+  }
+  
+  .star::before {
+    content: "Get Started"; /* Replace with your desired text 
+    position: absolute;
+    color: white;
+    font-size: 1.7em;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .star:hover {
+    transition: .2s;
+    background-color: #3c4170; /* Change background color on hover 
+    transform: scale(1.1); /* Slightly enlarge the star on hover 
+  } */
