@@ -61,6 +61,7 @@ body {
     display: flex;
     align-items: center;
     padding: 2rem;
+    /* margin-right: 5rem; */
     height: 0;
   }
 
@@ -231,6 +232,90 @@ body {
   }
 
   /* End of Login Styling */
+
+  /* Homepage styling (olivia, photos, concert, fanarts */
+
+  .selection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90svh;
+  }
+
+  .selection {
+    display: flex;
+    gap: 1.5rem;
+    zoom: 120%;
+  }
+
+  .selection div {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    transition: .5s;
+  }
+
+  .selection div:hover {
+    box-shadow: 0px 0px 50px rgb(197, 166, 255);
+    transition: .5s;
+  }
+
+  .selection div img {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+
+  .selection div img:hover {
+    transform: scale(110%);
+  }
+
+  .poster {
+    transform: scale(105%);
+  }
+
+  .poster:hover {
+    transform: scale(115%);
+  }
+  
+  /* Key behavior for zooming in pics */
+
+  .kid, .album2, .poster2, .fanart2 {
+    opacity: 0; /* Default image is hidden */
+  }
+  
+  .selection div:hover .olivia, .selection div:hover .album, .selection div:hover .poster, .selection div:hover .fanart {
+    opacity: 0; /* Fade out initial picture */
+    transform: scale(1.1);
+  }
+  
+  .selection div:hover .kid, .selection div:hover .album2, .selection div:hover .poster2, .selection div:hover .fanart2 {
+    opacity: 1; /* Fade in secondary picture */
+  }
+
+  /* End of key behavior */
+
+  .album {
+    object-position: 10% 100%;
+  }
+
+  /* Ribbon */
+
+  .ribbon {
+    position: absolute;
+    z-index: 2;
+    width: 500px;
+    top: 110px
+  }
+
+  /* End of ribbon */
+  
+
+  /* End of homepage stylings */
 
 
   /* Media Stylings */

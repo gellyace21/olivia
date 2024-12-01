@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="res/images/icon.png" />
+    <style>
+      #myVideo-container:before {
+        background: linear-gradient(#847dbfd7, #847dbfd7);
+      }
+    </style>
+  </head>
+  <body>
+    <div w3-include-html="nav.html"></div>
+    <div id="myVideo-container">
+      <video autoplay muted loop id="myVideo">
+        <source src="res/videos/bgvid.mov" type="video/mp4" />
+      </video>
+      <img
+        src="res/images/homepage/homebg.png"
+        alt="Overlay Image"
+        id="overlayImage"
+      />
+    </div>
+    <div class="selection-container">
+      <img src="res/images/homepage/ribbonHome.png" alt="" class="ribbon" />
+      <div class="selection">
+        <div>
+          <img src="res/images/homepage/olivia1.png" alt="" class="olivia" />
+          <img src="res/images/homepage/oliviakid.png" alt="" class="kid" />
+        </div>
+        <div>
+          <img src="res/images/homepage/gutsAlbum.webp" alt="" class="album" />
+          <img src="res/images/homepage/sour.webp" alt="" class="album2" />
+        </div>
+        <div>
+          <img src="res/images/homepage/gutsposter.png" alt="" class="poster" />
+          <img
+            src="res/images/homepage/oliviaposter.png"
+            alt=""
+            class="poster2"
+          />
+        </div>
+        <div>
+          <img src="res/images/homepage/fanart1.png" alt="" class="fanart" />
+          <img src="res/images/homepage/fanart2.png" alt="" class="fanart2" />
+        </div>
+      </div>
+      <a
+        href="message.html"
+        class="getStartedButton"
+        style="position: absolute; bottom: 90px"
+      >
+        <p class="getStarted" style="font-size: 1.5rem">
+          Send a message to Olivia!
+        </p>
+        <img src="res/images/bandaid.png" alt="" class="bandaid" width="300" />
+      </a>
+    </div>
+    <script src="nav.js"></script>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
