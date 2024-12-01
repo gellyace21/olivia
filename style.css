@@ -272,7 +272,7 @@ footer {
   zoom: 120%;
 }
 
-.selection .boxContent {
+.boxContent {
   position: relative;
   width: 250px;
   height: 350px;
@@ -286,7 +286,7 @@ footer {
   transition: 0.5s;
 }
 
-.selection .boxContent img {
+.boxContent img {
   position: absolute;
   width: inherit;
   height: inherit;
@@ -461,21 +461,125 @@ img {
 /* Media Stylings */
 /* This is for adjusting the site's elements depending on the screen size (Desktop, phone, tablet), defined by px (1920 x 1080) */
 
-@media (max-height: 900px) {
+@media (max-width: 600px) { /* Phone Pages */
+
+  /* Index page */
+  .nav-container ul {
+    margin-right: -1rem;
+  }
+  .nav-container ul li a:not(.brandlogo) {
+    padding: 0 1.5rem;
+  }
+
   .container {
-    margin: 0 2rem;
+    margin: -3rem 2rem;
+  }
+
+  .content {
+    gap: 2rem;
   }
 
   .getStartedButton {
-    transform: scale(50%);
+    transform: scale(60%);
   }
   .homeText {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   #overlayImage {
     display: none;
   }
+  /* End of Index page */
+
+  /* Sign-up/Login page */
+
+  .loginContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .loginBox {
+    float: none;
+    margin: auto;
+    width: 100px;
+    padding: 2rem 7rem;
+  }
+
+  .loginBox input {
+    width: 200px;
+  }
+
+  .loginBox label {
+    margin-left: -50px;
+    font-size: 1rem;
+  }
+
+  .loginBox h1 {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .loginBox button {
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    width: 200%;
+  }
+
+  .loginBox p {
+    text-align: center;
+    font-size: 1.1rem;
+    width: 200%;
+  }
+  /* End of Signup/Login */
+
+
+  /* Homepage phone */
+
+  .selection {
+    padding: 4rem 0 7rem 0;
+    flex-direction: column;
+    
+    overflow: auto;
+    
+    height: 120lvh;
+  }
+
+  .boxContent {
+    zoom: 60%;
+  }
+
+  .ribbon {
+    display: none;
+  }
+
+  /* End of homepage phone */
+
+  /* Olivia Rodrigo About */
+
+  .oliviaContainer {
+    position: absolute;
+    top: -20px;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin: 0 5rem;
+  }
+
+  .oliviaContent {
+    gap: 3rem;
+  }
+
+  .socials-container {
+    display: flex;
+    position: none;
+    justify-content: center;
+    margin: 0 1rem;
+    align-items: center;
+    bottom: -30px;
+    zoom: 70%;
+  }
+
+  /* End of Olivia About */
 }
 
 /* End of Media Stylings */
