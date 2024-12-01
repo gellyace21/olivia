@@ -79,14 +79,15 @@ body {
     left: 0;
     padding: 2rem 0;
     gap: .5rem;
+    font-size: .8rem;
   }
-
+/* 
   main {
     background-image: url('res/images/bgwebsite.png');
     background-size: cover;
     height: 100svh;
     z-index: 1;
-  }
+  } */
 
   .container {
     display: flex;
@@ -208,6 +209,7 @@ body {
     align-items: center;
     border-radius: 1.5rem;
     zoom: 90%;
+    width: 400px;
   }
 
   .loginBox input {
@@ -256,3 +258,27 @@ body {
   }
 
   /* End of Login Styling */
+
+
+  /* Media Stylings */
+
+  @media (max-height: 900px) {
+
+    .container {
+      margin: 0 2rem;
+    }
+
+    .getStartedButton {
+      transform: scale(50%);
+    }
+    .homeText {
+      font-size: 1rem;
+    }
+
+    #overlayImage {
+      display: none;
+    }
+  }
+
+
+  /* End of Media Stylings */
