@@ -43,6 +43,8 @@ span {
     gap: 1rem;
 }
 
+/* Key behavior */
+
 .cardImage {
     height: 425px;
     overflow: hidden;
@@ -61,6 +63,8 @@ span {
 .cardImage:hover img {
     transform: scale(1.1);
 }
+
+/* End of key behavior */
 
 @media (max-width: 600px) {
 

@@ -1,0 +1,35 @@
+.fanartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+}
+
+.fanartContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 1200px;
+}
+
+.fanartItem {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.fanartItem img, .fanartItem a {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.fanartItem:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
