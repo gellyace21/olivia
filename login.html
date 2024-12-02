@@ -3,19 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Login</title>
-    <link rel="icon" type="image/x-icon" href="res/images/icon.png">
+    <link rel="icon" type="image/x-icon" href="res/images/icon.png" />
     <style>
-        #myVideo-container:before {
-            background: linear-gradient(#847dbfd7,#847dbfd7);
-        }
+      #myVideo-container:before {
+        background: linear-gradient(#847dbfd7, #847dbfd7);
+      }
     </style>
   </head>
   <body>
-    
-    <div w3-include-html="nav.html"></div>
-    
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li>
+            <a href="index.html" class="brandlogo"
+              ><img
+                src="res/images/brandlogo.gif"
+                alt="Olivia Rodrigo"
+                width="40"
+            /></a>
+          </li>
+          <li><a href="signup.html">Sign-up</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="creatorsIndex.html">Creators</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div id="myVideo-container">
       <video autoplay muted loop id="myVideo">
         <source src="res/videos/bgvid.mov" type="video/mp4" />
@@ -24,18 +39,26 @@
     </div>
 
     <div class="loginContainer">
-        <form class="loginBox">
-            <h1>Login</h1>
-            <label for="email">E-mail</label>
-            <input id="email" type="email" placeholder="Enter your e-mail">
-            <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Enter your password">
-            <button type="submit" onclick="window.location='home.html'; return false;">Login</button>
-            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-        </form>
+      <form class="loginBox">
+        <h1>Login</h1>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="Enter your e-mail" />
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+        />
+        <button
+          type="submit"
+          onclick="window.location='home.html'; return false;"
+        >
+          Login
+        </button>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </form>
     </div>
 
-    <script src="nav.js"></script>
     <script>
       includeHTML();
     </script>

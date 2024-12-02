@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Creators</title>
+    <link rel="icon" type="image/x-icon" href="res/images/icon.png" />
+    <style>
+      #myVideo-container:before {
+        background: linear-gradient(#847dbfd7, #847dbfd7);
+      }
+
+      .creatorContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 90svh;
+        gap: 3rem;
+      }
+
+      h1 {
+        font-family: "Magazine";
+        font-size: 5rem;
+        color: white;
+        letter-spacing: 1rem;
+        text-shadow: 5px 5px black;
+      }
+
+      span {
+        font-size: 2.1rem;
+        text-shadow: 1px 1px black;
+      }
+
+      .creatorContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .creatorContent img {
+        width: 20rem;
+      }
+
+      .creatorCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .cardImage {
+        height: 425px;
+        overflow: hidden;
+      }
+
+      .cardImage img {
+        transition: 0.5s;
+      }
+
+      .cardImage:hover img {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li>
+            <a href="index.html" class="brandlogo"
+              ><img
+                src="res/images/brandlogo.gif"
+                alt="Olivia Rodrigo"
+                width="40"
+            /></a>
+          </li>
+          <li><a href="signup.html">Sign-up</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="creatorsIndex.html">Creators</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="myVideo-container">
+      <video autoplay muted loop id="myVideo">
+        <source src="res/videos/bgvid.mov" type="video/mp4" />
+      </video>
+      <img
+        src="res/images/creatorbg.png"
+        alt="Overlay Image"
+        id="overlayImage"
+      />
+    </div>
+    <div class="creatorContainer">
+      <h1>Creators</h1>
+      <div class="creatorContent">
+        <div class="creatorCard">
+          <div class="cardImage">
+            <img src="res/images/lusabio.jpg" alt="" />
+          </div>
+          <span>Gill Irish B. Lusabio</span>
+        </div>
+        <div class="creatorCard">
+          <div class="cardImage">
+            <img src="res/images/montaner.jpg" alt="" />
+          </div>
+          <span>Hamrainie L. Montaner</span>
+        </div>
+        <div class="creatorCard">
+          <div class="cardImage"><img src="res/images/salen.jpg" alt="" /></div>
+          <span>John Patrick B. Salen</span>
+        </div>
+      </div>
+    </div>
+    <script src="nav.js"></script>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

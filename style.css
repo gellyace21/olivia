@@ -18,6 +18,11 @@
   src: url("res/fonts/Schoolbell-Regular.ttf")
 }
 
+@font-face {
+  font-family: 'Magazine';
+  src: url('res/fonts/MagazineLetterByBrntlbrnl-Regular.ttf');
+}
+
 body {
   font-family: "LILIMING";
   color: white;
