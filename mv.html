@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Music Videos</title>
+    <link rel="icon" type="image/x-icon" href="res/images/icon.png">
+    <style>
+
+        body {
+            overflow-y: auto;
+        }
+
+        #overlayImage {
+          position: fixed;
+        }
+
+         #myVideo-container:before {
+            background: linear-gradient(#847dbfd7,#847dbfd7);
+            height: 500svh;
+            position: fixed;
+        }
+        
+        .mvContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100svh;
+        }
+
+        .musicVideos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 10rem;
+            gap: 3rem;
+        }
+
+        .musicVideos div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        iframe {
+            box-sizing: border-box;
+            border: none;
+            border-radius: 1.2rem;
+            transition: .5s;
+        }
+
+        span {
+            font-size: 2rem;
+            color: rgb(229, 216, 255);
+            text-shadow: 0px 0px 10px rgb(197, 166, 255);
+            opacity: 0;
+            transition: .5s;
+            font-weight: bold;
+        }
+
+        iframe:hover {
+            box-shadow: 0 0 0 0.5rem rgb(197, 166, 255);
+            filter: drop-shadow(0px 0px 15px rgb(197, 166, 255));
+            transition: .5s;
+        }
+
+        iframe:hover ~ span {
+            opacity: 1;
+        }
+    </style>
+  </head>
+  <body>
+    <div w3-include-html="nav.html"></div>
+    <div id="myVideo-container">
+      <video autoplay muted loop id="myVideo">
+        <source src="res/videos/bgvid.mov" type="video/mp4" />
+      </video>
+      <img src="res/images/mvbg.png" alt="Overlay Image" id="overlayImage" style="transform: translate(-50%, -45%);"/>
+    </div>
+    <div class="mvContainer">
+        <div class="musicVideos">
+            <div>
+                <iframe src="https://cdpn.io/pen/debug/oNPzxKo?v=Dj9qJsJTsjQ?si=octl4ugbsBRphHi_" name="music Video" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="380px" width="700px" allowfullscreen></iframe>
+                <span>bad idea right?</span>
+            </div>
+            <div>
+                <iframe src="https://cdpn.io/pen/debug/oNPzxKo?v=RlPNh_PBZb4?si=xHfiunvfDfOtm2d-" name="music Video" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="380px" width="700px" allowfullscreen></iframe>
+                <span>vampire</span>
+            </div>
+        </div>
+    </div>
+    <script src="nav.js"></script>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
