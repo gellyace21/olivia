@@ -47,6 +47,7 @@
         .creatorCard {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             gap: 1rem;
         }
@@ -54,6 +55,12 @@
         .cardImage {
             height: 425px;
             overflow: hidden;
+            box-shadow: 5px 5px #483370;
+            transition: .5s;
+        }
+
+        .cardImage:hover {
+            box-shadow: 0px 0px 50px rgb(197, 166, 255);
         }
 
         .cardImage img {
@@ -62,6 +69,37 @@
 
         .cardImage:hover img {
             transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+
+            #myVideo-container::before {
+                height: 150%;
+                overflow: hidden;
+            }
+
+            body {
+                overflow-y: auto;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .creatorContainer {
+                padding: 3rem 0 2rem 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto;
+            }
+
+            .creatorContent {
+                flex-direction: column;
+            }
+
+            .creatorCard {
+                zoom: 60%;
+            }
         }
 
     </style>

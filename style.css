@@ -323,18 +323,18 @@ footer {
   opacity: 0; /* Default image is hidden */
 }
 
-.selection div:hover .olivia,
-.selection div:hover .album,
-.selection div:hover .poster,
-.selection div:hover .fanart {
+.boxContent:hover .olivia,
+.boxContent:hover .album,
+.boxContent:hover .poster,
+.boxContent:hover .fanart {
   opacity: 0; /* Fade out initial picture */
   transform: scale(1.1);
 }
 
-.selection div:hover .kid,
-.selection div:hover .album2,
-.selection div:hover .poster2,
-.selection div:hover .fanart2 {
+.boxContent:hover .kid,
+.boxContent:hover .album2,
+.boxContent:hover .poster2,
+.boxContent:hover .fanart2 {
   opacity: 1; /* Fade in secondary picture */
 }
 
@@ -544,6 +544,10 @@ img {
 
   /* Homepage phone */
 
+  body {
+    overflow-y: hidden;
+  }
+
   .selection {
     padding: 4rem 0 7rem 0;
     flex-direction: column;
@@ -551,7 +555,7 @@ img {
     overflow: auto;
     
     max-height: 100svh;
-    min-width: 100svh;
+    width: 100%;
   }
 
   .boxContent {
