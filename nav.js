@@ -25,3 +25,9 @@ function includeHTML() {
       }
     }
   }
+
+  window.onload = function() {
+    // When the page is fully loaded, show and load the video
+    var video = document.getElementById('myVideo');
+    video.load(); // Load the video
+  };
