@@ -115,7 +115,7 @@ footer {
   left: 0;
   padding: 2rem 0;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 /* End of footer stylings */
@@ -247,6 +247,7 @@ footer {
   font-family: "Magazine";
   font-size: 4rem;
   text-align: center;
+  letter-spacing: 3px;
 }
 
 .loginBox a {

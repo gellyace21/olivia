@@ -42,20 +42,45 @@
       <form class="loginBox">
         <h1>Create <br />an Account</h1>
         <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Your name" />
+        <input id="name" type="text" placeholder="Your name" required />
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Your e-mail" />
+        <input id="email" type="email" placeholder="Your e-mail" required />
         <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Your password" />
-        <button
-          type="submit"
-          onclick="window.location='login.html'; return false"
-        >
-          Sign-up
-        </button>
+        <input
+          id="password"
+          type="password"
+          placeholder="Your password"
+          required
+        />
+        <button type="submit">Sign-up</button>
+        <p id="signupMessage"></p>
         <p>Already registered? <a href="login.html">Login</a></p>
       </form>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        let userData = {};
+        $("#signupMessage").hide();
+        $(".loginBox").on("submit", function (event) {
+          event.preventDefault();
+
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var password = $("#password").val();
+
+          localStorage.setItem("name", name);
+          localStorage.setItem("email", email);
+          localStorage.setItem("password", password);
+          $("#signupMessage").show().text("Account successfully created!");
+        });
+      });
+    </script>
 
     <script>
       includeHTML();
