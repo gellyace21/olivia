@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Message</title>
+    <link rel="icon" type="image/x-icon" href="res/images/icon.png">
+    <style>
+
+        #myVideo-container:before {
+        background: linear-gradient(#3d2146d7, #3d2146d7);
+        }
+
+        .messageContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90svh;
+        }
+
+        .messageContent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .messageName {
+            display: flex;
+            align-items: center;
+            border: none;
+            border-radius: 2.5rem;
+            padding: 1rem 2rem;
+            flex-grow: 1;
+            width: 20rem;
+            height: 2.5rem;
+            background-color: #524a96;
+            margin-right: auto;
+            transition: box-shadow .5s;
+            transition: 0s;
+        }
+
+        .messageName input {
+            width: 90%;
+            height: 100%;
+            border: none;
+            background-color: #524a96;
+        }
+
+        .messageName span {
+            width: 50%;
+            font-size: 1.5rem;
+        }
+
+        #messageBox {
+            background-color: #847dbf;
+            width: 70rem;
+            height: 20rem;
+            padding: 2rem;
+            border: none;
+            border-radius: 2rem;
+            transition: .5s;
+        }
+
+        textarea, input {
+            font-family: 'LILIMING';
+            color: white;
+            font-size: 1.5rem;
+            resize: none;
+        }
+
+        #messageBox::placeholder {
+            color: white;
+        }
+
+        textarea:focus, input:focus{
+            outline: none;
+        }
+
+        #messageBox:hover {
+            box-shadow: 0px 0px 40px #847dbf;
+        }
+
+        .messageName:hover {
+            box-shadow: 0px 0px 40px #524a96;
+        }
+
+
+    </style>
+</head>
+  <body>
+    <div w3-include-html="nav.html"></div>
+      <img src="res/images/messageBg.png" alt="Overlay Image" id="overlayImage" />
+    </div>
+    <div class="messageContainer">
+        <div class="messageContent">
+            <h1>Connect with Olivia through your message!</h1>
+            <div class="messageName"><span>Your Name:</span><input type="text"></div>
+            <textarea name="" id="messageBox" placeholder="Write a message here..."></textarea>
+        </div>
+    </div>
+    <script src="nav.js"></script>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
