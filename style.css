@@ -62,7 +62,7 @@ body {
 }
 
 /* Start of nav */
-
+/* cute mo lagi sobra */
 nav {
   top: 0;
   position: fixed;
@@ -184,9 +184,16 @@ footer {
 
 /* Login/Sign-up Styling */
 
+.loginWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90svh;
+
+}
+
 .loginContainer {
   /* Contains the loginBox; it centers the elements within it (loginBox) with display: flex */
-  height: 90svh;
   width: 100%;
   align-content: center;
   z-index: 3;

@@ -38,21 +38,23 @@
       <img src="res/images/loginbg.png" alt="Overlay Image" id="overlayImage" />
     </div>
 
-    <div class="loginContainer">
-      <form class="loginBox">
-        <h1>Login</h1>
-        <label for="email">E-mail</label>
-        <input id="email" type="email" placeholder="Enter your e-mail" />
-        <label for="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          placeholder="Enter your password"
-        />
-        <button type="submit" id="submit">Login</button>
-        <p id="loginMessage"></p>
-        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-      </form>
+    <div class="loginWrapper">
+      <div class="loginContainer">
+        <form class="loginBox">
+          <h1>Login</h1>
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="Enter your e-mail" />
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter your password"
+          />
+          <button type="submit" id="submit">Login</button>
+          <p id="loginMessage"></p>
+          <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </form>
+      </div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
@@ -62,7 +64,7 @@
     <script>
       $("#loginMessage").hide();
       $(document).ready(function () {
-        $('.loginBox').on('submit', function (event) {
+        $(".loginBox").on("submit", function (event) {
           event.preventDefault();
 
           var email = $("#email").val();
@@ -72,7 +74,10 @@
             return;
           }
 
-          if (email === localStorage.getItem('email') && password === localStorage.getItem('password')) {
+          if (
+            email === localStorage.getItem("email") &&
+            password === localStorage.getItem("password")
+          ) {
             $("#loginMessage").show().text("Success!");
             window.location = "home.html";
           } else {
