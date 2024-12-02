@@ -9,11 +9,6 @@
 }
 
 @font-face {
-  font-family: "RansomFont";
-  src: url("res/fonts/ransom.ttf");
-}
-
-@font-face {
   font-family: "Schoolbell";
   src: url("res/fonts/Schoolbell-Regular.ttf")
 }
@@ -26,13 +21,13 @@
 body {
   font-family: "LILIMING";
   color: white;
-  overflow: hidden;
+  overflow: hidden; /* Overflow hidden to ensure unnecessary scrolling on pages */
   padding-top: 60px;
 }
 
 #overlayImage {
   /* Styling for the png above the video */
-  position: absolute; /* Position the image above the video and gradient */
+  position: fixed; /* To make image follow even if scrolling; setting this to fixed also makes gradient follow */
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust for perfect centering */
@@ -43,12 +38,12 @@ body {
 
 #myVideo {
   /* Stylings for the video background */
-  position: fixed;
+  position: fixed; /* Follows the screen even when scrolling */
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: -2;
+  z-index: -2; /* Make sure it is below all elements */
 }
 
 #myVideo-container:before {
