@@ -33,3 +33,35 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
+/* add */
+
+.addFanartButton {
+    font-size: 48px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 4px dashed #9de99d;
+    border-radius: 10px;
+    margin: 20px auto;
+    color: #12d382;
+}
+.addFanartButton:hover {
+    background-color: #c574cc;
+    color: rgb(54, 188, 206);
+}
+.hiddenFileInput {
+    display: none;
+}
+
+.addFanartText {
+    text-align: center;
+    font-size: 20px;
+    color: #f7f7f7;
+    margin-top: 10px;
+}
+
+

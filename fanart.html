@@ -14,7 +14,7 @@
     </style>
 </head>
   <body>
-    <div w3-include-html="nav.html"></div>
+    <!-- <div w3-include-html="nav.html"></div>
       <img src="res/images/fanartBg.png" alt="Overlay Image" id="overlayImage" />
     </div>
 
@@ -24,8 +24,17 @@
                 <a href="https://i.pinimg.com/736x/e3/b9/41/e3b9413ab75c4ae4f4f2cfecdce7c604.jpg" target="_blank"><img src="https://i.pinimg.com/736x/e3/b9/41/e3b9413ab75c4ae4f4f2cfecdce7c604.jpg" alt=""></a>
             </div>
         </div>
-    </div>
+    </div> -->
 
+    <div w3-include-html="nav.html"></div>
+    <img src="res/images/fanartBg.png" alt="Overlay Image" id="overlayImage" />
+    
+    
+    <div class="fanartContainer">
+        <div class="fanartContent" id="fanartContent">
+           <!-- Fanart items will be appended here by JavaScript -->
+        </div>
+    </div>
     <script src="fanart.js"></script>
     <script src="nav.js"></script>
     <script>
