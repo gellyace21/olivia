@@ -1,3 +1,7 @@
+body {
+  overflow-y: auto; /* Enable scrolling */
+}
+
 .fanartContainer {
   display: flex;
   align-items: center;
@@ -14,18 +18,21 @@
   width: 1200px;
 }
 
+
+/* Key behavior */
+
 .fanartItem {
-  position: relative;
+  position: relative; /* To make sure the child elements are aware of the div */
   width: 250px;
   height: 350px;
-  overflow: hidden;
+  overflow: hidden; /* Makes sure the image doesn't overflow */ 
 }
 
 .fanartItem img, .fanartItem a {
-  position: absolute;
+  position: absolute; /* In general, good to combine relative as parent and absolute as child */
   width: inherit;
   height: inherit;
-  object-fit: cover;
+  object-fit: cover; /* Fits in the given div */
   transition: 0.5s ease;
 }
 
@@ -65,3 +72,110 @@
 }
 
 
+/* End of key behavior */
+
+
+
+/* Jp */
+/* Plus button */
+
+/* .addFanart {
+  zoom: 1.2;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #211637;
+  bottom: 0;
+  right: 5rem; 
+  margin: 5rem;
+  transition: .5s;
+}
+
+.addFanart span {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 2.8rem;
+  font-size: 3rem;
+}
+
+.addFanart:hover {
+  bottom: 10px;
+  cursor: pointer;
+}
+
+/* End of plus button */
+
+
+/* pop-up */
+
+/* .addLinkContainer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100svw;
+  position: fixed;
+  z-index: 2;
+  background: linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        );
+  transition: all .5s;
+}
+
+.addLinkContainer.open {
+  display: flex;
+  backdrop-filter: blur(20px);
+  transition: all .2s;
+}
+
+.addLink{
+  margin-bottom: 5rem;
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background-color: #9d84b6;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 50px #9d84b6;
+  
+}
+
+#fileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #211637;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  color: white;
+}
+
+#fileForm button, #fileForm input {
+  border: none;
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 1.1rem;
+  margin: 1rem;
+  font-size: 4rem;
+  color: #211637;
+  transition: .2s;
+}
+
+.close:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+} */
+
+/* end of pop-up */
