@@ -94,13 +94,23 @@
     <div w3-include-html="nav.html"></div>
       <img src="res/images/messageBg.png" alt="Overlay Image" id="overlayImage" />
     </div>
-    <div class="messageContainer">
+    <form class="messageContainer">
         <div class="messageContent">
             <h1>Connect with Olivia through your message!</h1>
             <div class="messageName"><span>Your Name:</span><input type="text"></div>
             <textarea name="" id="messageBox" placeholder="Write a message here..."></textarea>
+            
+            <button
+        class="getStartedButton"
+        style="position: absolute; bottom: 100px; zoom: .8; background: none; border: none;" type="submit"
+      >
+        <p class="getStarted" style="font-size: 4rem; ">
+          Send!
+        </p>
+        <img src="res/images/bandaid.png" alt="" class="bandaid" width="300" />
+      </button>
         </div>
-    </div>
+    </form>
     <script src="nav.js"></script>
     <script>
       includeHTML();
