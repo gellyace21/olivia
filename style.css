@@ -33,7 +33,7 @@ body {
   transform: translate(-50%, -50%); /* Adjust for perfect centering */
   z-index: -1; /* Ensure the image is above the gradient and video */
   width: 100%; /* Adjust size */
-  height: 100%; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
 }
 
 #myVideo {
@@ -274,6 +274,7 @@ footer {
   justify-content: center;
   height: 90svh;
   gap: 2rem;
+  padding-bottom: 4rem;
 }
 
 .selection {
@@ -386,6 +387,31 @@ footer {
 }
 
 /* End of ribbon */
+
+
+/* siteDesc */
+
+/* .siteDesc {
+  background-color: #211637;
+  height: 20rem;
+  display: flex;
+}
+
+.descPic {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: 20rem;
+}
+
+.descPic img {
+  position:  absolute;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+} */
+
+/* end of siteDesc */
 
 /* End of homepage stylings */
 
