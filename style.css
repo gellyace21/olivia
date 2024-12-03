@@ -33,7 +33,7 @@ body {
   transform: translate(-50%, -50%); /* Adjust for perfect centering */
   z-index: -1; /* Ensure the image is above the gradient and video */
   width: 100%; /* Adjust size */
-  height: auto; /* Maintain aspect ratio */
+  height: 100%; /* Maintain aspect ratio */
 }
 
 #myVideo {
