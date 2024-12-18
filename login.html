@@ -10,6 +10,10 @@
       #myVideo-container:before {
         background: linear-gradient(#847dbfd7, #847dbfd7);
       }
+
+      #togglePass:hover {
+        filter: invert(78%) sepia(9%) saturate(1066%) hue-rotate(205deg) brightness(87%) contrast(88%);
+      }
     </style>
   </head>
   <body>
@@ -40,7 +44,7 @@
 
     <div class="loginWrapper">
       <div class="loginContainer">
-        <form id="loginBox" class="loginBox" onsubmit="return login(event)">
+        <form id="loginBox" class="loginBox" onsubmit="return login(event)" style="position: relative">
           <h1>Login</h1>
           <label for="email">E-mail</label>
           <input
@@ -56,12 +60,25 @@
             type="password"
             placeholder="Enter your password"
           />
+          <a id="togglePass" href="#" onclick="showPass()" style="position: absolute; right: 19%; top: 50.8%; transform: translateY(50%);"><img src="res/images/eye.svg" alt=""></a>
           <button type="submit" id="submit">Login</button>
           <p id="loginMessage"></p>
           <p>Don't have an account? <a href="signup.html">Sign up</a></p>
         </form>
       </div>
     </div>
+
+    <script>
+      function showPass(){
+        const password = document.getElementById('password');
+        if (password.type === 'password') {
+          password.type = 'text';
+        }
+        else {
+          password.type = 'password';
+        }
+      }
+    </script>
 
     <script>
       async function login(event) {
