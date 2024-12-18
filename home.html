@@ -8,8 +8,33 @@
     <link rel="icon" type="image/x-icon" href="res/images/icon.png" />
     <link rel="stylesheet" href="messages.css">
     <style>
+      body {
+        overflow: hidden;
+      }
       #myVideo-container:before {
         background: linear-gradient(#847dbfd7, #847dbfd7);
+      }
+
+      .messageSection {
+        background-color: #211637;
+        height: 40em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .message-container {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .message {
+        padding: 20px; 
+        background-color: #907da9;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
       }
     </style>
   </head>
@@ -79,6 +104,11 @@
         <img src="res/images/bandaid.png" alt="" class="bandaid" width="300" />
       </a>
     </div>
+
+    <!-- <div class="messageSection">
+    <div id="messages-container"></div>
+    </div> -->
+
     <!-- <div class="messagesBox">
       <div class="descPic">
         <img src="res/images/oliviaPic.jpeg" alt="">
@@ -86,6 +116,23 @@
       <p>Welcome to the Olivia Site! This platform is a prototype, serving as a demonstration and testing environment for upcoming features and design concepts. Please note that functionality and content may be limited or subject to change as we refine the experience. Your feedback is valuable in helping us shape the future of Olivia Site!</p>
     </div> -->
   </main>
+    <script>
+      async function fetchMessages(){
+        const container = document.getElementById('messages-container');
+        const response = await fetch('https://oliviaserver.onrender.com/getmessages');
+        const data = await response.json();
+
+          data.data.forEach(message => {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message');
+                messageDiv.innerHTML = `
+                    <p>${message.message}</p> <p><strong>- ${message.username}:</strong></p> 
+                `;
+                container.appendChild(messageDiv);
+            });
+
+      }
+    </script>
     <script src="nav.js"></script>
     <script>
       includeHTML();
