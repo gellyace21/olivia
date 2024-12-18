@@ -56,6 +56,30 @@ body {
   z-index: -1;
 }
 
+/* Scroll Style */
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2d2442;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7663b0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #524a96; 
+}
+
+/* End of scroll style */
+
 /* Start of nav */
 /* cute mo lagi sobra */
 nav {
