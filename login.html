@@ -120,14 +120,13 @@
         const form = document.getElementById("loginBox");
         const formData = new FormData(form); // Collect form data
 
-        // Send a POST request to the Flask backend
+        // Send a POST request to the PHP back-end via Tiiny Host
         const response = await fetch(
-          "https://oliviaserver.onrender.com/login",
+          "https://olivia-users.tiiny.io/login.php",
           {
             // Replace with your actual Flask app URL
             method: "POST",
             body: formData, // Send form data
-            credentials: "include",
           }
         );
 

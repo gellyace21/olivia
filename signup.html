@@ -101,8 +101,8 @@
         const form = document.getElementById("loginBox");
         const formData = new FormData(form); // Collect form data
     
-        // Send a POST request to the Flask backend
-        const response = await fetch("https://oliviaserver.onrender.com/signup", { // Replace with your actual Flask app URL
+        // Send a POST request to the PHP backend
+        const response = await fetch("https://olivia-users.tiiny.io/signup.php", { // Replace with your actual Flask app URL
           method: "POST",
           body: formData, // Send form data
         });

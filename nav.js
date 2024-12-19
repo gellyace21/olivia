@@ -37,10 +37,7 @@ window.onload = function () {
 };
 
 async function logout() {
-  const response = await fetch("https://oliviaserver.onrender.com/logout", {
-    // Replace with your actual Flask app URL
-    method: "POST",
-  });
+  const response = await fetch("https://olivia-users.tiiny.io/logout.php");
 
   const result = await response.json();
 
