@@ -41,15 +41,15 @@ body {
   position: fixed; /* Follows the screen even when scrolling */
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   z-index: -2; /* Make sure it is below all elements */
 }
 
 #myVideo-container:before {
   /* The color above the video */
   content: "";
-  position: absolute;
+  position: fixed;
   min-height: 100%;
   width: 100%;
   background: linear-gradient(#847dbf65, #847dbfa1);
@@ -129,12 +129,17 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  position: absolute;
   bottom: 0;
   left: 0;
   padding: 2rem 0;
   gap: 0.5rem;
   font-size: 1.2rem;
+}
+
+.pageFooter {
+  margin-top: 10rem;
+  background-color: white;
+  color: black;
 }
 
 /* End of footer stylings */

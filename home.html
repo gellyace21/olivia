@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="messages.css">
     <style>
       body {
-        overflow: hidden;
+        overflow: auto;
       }
       #myVideo-container:before {
         background: linear-gradient(#847dbfd7, #847dbfd7);
@@ -22,19 +22,55 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
       }
 
-      .message-container {
+      .messagesSquare {
         display: flex;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        max-width: 70%;
+        background-color: #7066a3;
+        padding: 0 1rem;
+        box-shadow: 10px 10px #43316d;
+        border-radius: 1rem;
+      }
+
+      #messages-container {
+        margin-top: -1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        /* background-color: #7066a3; */
+        padding: 1rem;
+        border-radius: 1rem;
+        max-width: 100%;
+
       }
 
       .message {
+        min-width: 5rem;
+        max-width: 10rem;
+        max-height: 20rem;
         padding: 20px; 
-        background-color: #907da9;
+        background-color: #af92d4;
         display: flex;
         flex-direction: column;
-        text-align: justify;
+        justify-content: center;
+        text-align: none;
+        gap: 1rem;
+        font-size: 1.4rem;
+        transition: .4s ease;
+        box-shadow: 10px 10px 0 #43316d;
+        text-shadow: 2px 2px 0 purple;
+      }
+
+      .message:hover {
+        filter: drop-shadow(0 0 15px #a07bd1);
       }
     </style>
   </head>
@@ -105,9 +141,16 @@
       </a>
     </div>
 
-    <!-- <div class="messageSection">
-    <div id="messages-container"></div>
-    </div> -->
+    <div class="messageSection">
+    <div class="messagesSquare">
+    <div id="messages-container">
+      <!-- <div class="message">
+        <p>Lorem ipsumqwdqqdwdqwd</p>
+        <p>wahriwqhqd</p>
+      </div> -->
+    </div>
+  </div>
+    </div>
 
     <!-- <div class="messagesBox">
       <div class="descPic">
@@ -115,8 +158,39 @@
       </div>
       <p>Welcome to the Olivia Site! This platform is a prototype, serving as a demonstration and testing environment for upcoming features and design concepts. Please note that functionality and content may be limited or subject to change as we refine the experience. Your feedback is valuable in helping us shape the future of Olivia Site!</p>
     </div> -->
+
+    <footer class="pageFooter">
+      <p>Creators:</p>
+      <p>Gill Irish B. Lusabio, Hamrainie L. Montañer, John Patrick B. Salen</p>
+    </footer>
   </main>
-    <script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('messages-container');
+
+    // Fetch messages from the PHP script
+    fetch('https://olivia-users.tiiny.io/getmessages.php')
+        .then(response => response.json())
+        .then(data => {
+            // Iterate over the messages and display them
+            data.forEach(message => {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message');
+                messageDiv.innerHTML = `
+                    <p>${message.message}</p> <p><strong>- ${message.username}</strong></p> 
+                `;
+                container.appendChild(messageDiv);
+                // const messageElement = document.createElement('div');
+                // messageElement.classList.add('message');
+                // messageElement.innerHTML = `<strong>${message.username}:</strong> ${message.message}`;
+                // messageContainer.appendChild(messageElement);
+            });
+        })
+        .catch(error => console.error('Error fetching messages:', error));
+});
+  </script>
+
+    <!-- <script>
       async function fetchMessages(){
         const container = document.getElementById('messages-container');
         const response = await fetch('https://oliviaserver.onrender.com/getmessages');
@@ -130,9 +204,8 @@
                 `;
                 container.appendChild(messageDiv);
             });
-
       }
-    </script>
+    </script> -->
     <script src="nav.js"></script>
     <script>
       includeHTML();
