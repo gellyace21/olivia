@@ -36,6 +36,22 @@ window.onload = function () {
   video.load(); // Load the video
 };
 
+// Verify if a user is logged in (Restrict access if false)
+// async function verify_login() {
+//   const response = await fetch("https://olivia-users.tiiny.io/verify.php");
+//   const result = await response.json();
+
+//   if (result.status == "success") {
+
+//   }
+//   else {
+//     alert("Please log in");
+//     window.location.href = "login.html";
+//   }
+// }
+// window.onload = verify_login;
+
+// Logout function (Deletes the temporarily stored user ID for session)
 async function logout() {
   const response = await fetch("https://olivia-users.tiiny.io/logout.php");
 
