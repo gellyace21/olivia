@@ -66,7 +66,7 @@
             placeholder="Your password"
             required
           />
-          <a id="togglePass" href="#" onclick="showPass()" style="position: absolute; right: 19%; top: 63%; transform: translateY(50%);"><img src="res/images/eye.svg" alt="" id="toggleImg"></a>
+          <a id="togglePass" href="#" onclick="showPass()" style="position: absolute; right: 19%; top: 63.1%; transform: translateY(50%);"><img src="res/images/eye.svg" alt="" id="toggleImg"></a>
           <button type="submit">Sign-up</button>
           <p id="signupMessage"></p>
           <p>Already registered? <a href="login.html">Login</a></p>
@@ -112,8 +112,12 @@
     
         // Check if login was successful
         if (result.status === "success") {
+          document.getElementById('togglePass').style.setProperty('transition', 'none', '');
+          document.getElementById('togglePass').style.setProperty('top', '61.1%', '');
           document.getElementById("signupMessage").innerText = result.message;
         } else {
+          document.getElementById('togglePass').style.setProperty('transition', 'none', '');
+          document.getElementById('togglePass').style.setProperty('top', '61.1%', '');
           document.getElementById("signupMessage").innerText = result.message; // Display error message
         }
       }
