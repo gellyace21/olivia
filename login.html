@@ -119,6 +119,13 @@
         // Get the form element
         const form = document.getElementById("loginBox");
         const formData = new FormData(form); // Collect form data
+        if (formData.get("email") === "" || formData.get("password") === "") {
+          document.getElementById('togglePass').style.setProperty('transition', 'none', '');
+          document.getElementById('togglePass').style.setProperty('top', '49%', '');
+          document.getElementById("loginMessage").innerText =
+            "Please fill in all fields.";
+          return;
+        }
 
         // Send a POST request to the PHP back-end via Tiiny Host
         const response = await fetch(
@@ -135,9 +142,13 @@
 
         // Check if login was successful
         if (result.status === "success") {
+          document.getElementById('togglePass').style.setProperty('transition', 'none', '');
+          document.getElementById('togglePass').style.setProperty('top', '49%', '');
           document.getElementById("loginMessage").innerText = result.message;
           window.location.href = "home.html"; // Redirect to signup page
         } else {
+          document.getElementById('togglePass').style.setProperty('transition', 'none', '');
+          document.getElementById('togglePass').style.setProperty('top', '49%', '');
           document.getElementById("loginMessage").innerText = result.message; // Display error message
         }
       }
