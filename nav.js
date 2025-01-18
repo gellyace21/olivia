@@ -90,3 +90,23 @@ async function logout() {
     alert("Logout failed:", result.message);
   }
 }
+
+
+setTimeout(function() {
+  const fname = document.getElementById('name');
+
+  fetch('https://olivia-users.tiiny.io/get_session.php')
+         .then(response => response.text())
+         .then(data => {
+             // Iterate over the messages and display them
+            if (data) {
+               console.log("Username retrieved: " + data);
+               fname.innerText = data;
+            }
+            else {
+             console.error("No user")
+            }
+         })
+         .catch(error => console.error('Error fetching messages:', error));
+}, 100);
+
